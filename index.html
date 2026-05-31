@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizMaster — Quiz & Exam System</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+</head>
+<body>
+
+<!-- ==================== LOGIN ==================== -->
+<div id="login-page">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="logo-icon">📝</div>
+        <div>
+          <div class="logo-text">QuizMaster</div>
+          <div class="logo-sub">Online Quiz & Exam System</div>
+        </div>
+      </div>
+
+      <h1 class="login-title">Welcome Back</h1>
+      <p class="login-sub">Sign in to your account to continue</p>
+
+      <!-- Demo Credentials -->
+      <div class="demo-creds">
+        <h4>🚀 Demo Credentials (stored in database)</h4>
+        <div class="demo-row">
+          <span class="demo-role">🛡️ Admin</span>
+          <span class="demo-info">admin@quizsystem.com / admin123</span>
+          <button class="fill-btn" onclick="fillDemo('admin')">Fill</button>
+        </div>
+        <div class="demo-row">
+          <span class="demo-role">👩‍🏫 Teacher</span>
+          <span class="demo-info">teacher@quizsystem.com / teacher123</span>
+          <button class="fill-btn" onclick="fillDemo('teacher')">Fill</button>
+        </div>
+        <div class="demo-row">
+          <span class="demo-role">🎓 Student</span>
+          <span class="demo-info">student@quizsystem.com / student123</span>
+          <button class="fill-btn" onclick="fillDemo('student')">Fill</button>
+        </div>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="login-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" id="login-password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-full btn-lg" style="margin-top:8px">
+          🔐 Sign In
+        </button>
+      </form>
+    </div>
+    <div style="text-align:center;margin-top:20px;font-size:12px;color:var(--text3)">
+      Developed by <span style="color:var(--primary-light);font-weight:600">Terence Ciubal</span> &nbsp;|&nbsp; BSIT - A607
+    </div>
+  </div>
+</div>
+
+<!-- ==================== APP ==================== -->
+<div id="app"></div>
+
+<!-- ==================== TOASTS ==================== -->
+<div class="toast-container" id="toast-container"></div>
+
+<script src="js/db.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
